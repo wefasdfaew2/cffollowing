@@ -1,0 +1,26 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                    xmlns:system="clr-namespace:System;assembly=mscorlib">
+    <!--  colors  -->
+    <SolidColorBrush x:Key="LightBlueColor">#03A9F4</SolidColorBrush>
+    <SolidColorBrush x:Key="DarkColor">#111</SolidColorBrush>
+    <SolidColorBrush x:Key="RedColor">#f44336</SolidColorBrush>
+    <SolidColorBrush x:Key="GreyColor">#BDBDBD</SolidColorBrush>
+
+    <!--  size  -->
+    <system:Int32 x:Key="BaseFontSize">16</system:Int32>
+
+    <!--  generic styles  -->
+    <Style x:Key="TextButtonIconStyle" TargetType="TextBlock">
+        <Setter Property="VerticalAlignment" Value="Center" />
+        <Setter Property="Padding" Value="4 0" />
+    </Style>
+
+    <!--  merge main style  -->
+    <ResourceDictionary.MergedDictionaries>
+        <ResourceDictionary Source="Theme.MainWindow.xaml" />
+    </ResourceDictionary.MergedDictionaries>
+
+
+
+</ResourceDictionary>
