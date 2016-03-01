@@ -9,5 +9,9 @@ namespace CFFollowingWPF.Bases
 {
     public class BaseUserControl : UserControl
     {
+        public BaseUserControl()
+        {
+
+        }
     }
 }

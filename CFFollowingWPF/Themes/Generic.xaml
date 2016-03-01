@@ -6,6 +6,8 @@
     <SolidColorBrush x:Key="DarkColor">#111</SolidColorBrush>
     <SolidColorBrush x:Key="RedColor">#f44336</SolidColorBrush>
     <SolidColorBrush x:Key="GreyColor">#BDBDBD</SolidColorBrush>
+    <SolidColorBrush x:Key="GreenColor">#4caf50</SolidColorBrush>
+    <SolidColorBrush x:Key="BlueColor">#2196F3</SolidColorBrush>
 
     <!--  size  -->
     <system:Int32 x:Key="BaseFontSize">16</system:Int32>

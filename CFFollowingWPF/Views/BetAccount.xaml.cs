@@ -12,15 +12,16 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using CFFollowingWPF.Bases;
 
-namespace CFFollowingWPF.PartialViews
+namespace CFFollowingWPF.Views
 {
     /// <summary>
-    /// Interaction logic for _BetAccount.xaml
+    /// Interaction logic for BetAccount.xaml
     /// </summary>
-    public partial class _BetAccount : UserControl
+    public partial class BetAccount : BaseUserControl
     {
-        public _BetAccount()
+        public BetAccount()
         {
             InitializeComponent();
         }
