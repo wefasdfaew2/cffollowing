@@ -3,10 +3,9 @@
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:material="clr-namespace:MaterialDesignThemes.Wpf;assembly=MaterialDesignThemes.Wpf"
         xmlns:view="clr-namespace:CFFollowingWPF.Views"
-        
         Title="CF Following v1"
-        Width="720"
-        Height="450"
+        Width="960"
+        Height="650"
         Background="{DynamicResource MaterialDesignPaper}"
         FontFamily="pack://application:,,,/MaterialDesignThemes.Wpf;component/Resources/Roboto/#Roboto"
         TextElement.FontSize="16"
@@ -24,12 +23,12 @@
         <Grid.RowDefinitions>
             <!--  account  -->
             <RowDefinition Height="6*" />
-            
-            <!-- results -->
+
+            <!--  results  -->
             <RowDefinition Height="4*" />
 
             <!--  status bar  -->
-            <RowDefinition Height="Auto" />            
+            <RowDefinition Height="Auto" />
         </Grid.RowDefinitions>
 
         <!--  region main content  -->
@@ -40,7 +39,7 @@
                     <RowDefinition Height="*" />
                     <RowDefinition Height="Auto" />
                 </Grid.RowDefinitions>
-                
+
                 <ItemsControl ItemsPanel="{StaticResource AccountPanelTemplate}">
                     <view:BetAccount Grid.Column="0" Margin="0 0 4 0" />
                     <view:BetAccount Grid.Column="1" Margin="4 0" />
@@ -48,7 +47,7 @@
                 </ItemsControl>
 
                 <!--  button add bet account  -->
-                <Button HorizontalAlignment="Left" Grid.Row="1">
+                <Button Grid.Row="1" HorizontalAlignment="Left">
                     <StackPanel Orientation="Horizontal">
                         <Viewbox Width="24" Height="24">
                             <Canvas Width="24" Height="24">

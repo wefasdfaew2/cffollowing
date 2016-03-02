@@ -10,7 +10,7 @@
         <Setter Property="Foreground" Value="Indigo" />
         <Setter Property="VerticalAlignment" Value="Center" />
     </Style>
-    
+
     <ItemsPanelTemplate x:Key="AccountPanelTemplate">
         <Grid>
             <Grid.ColumnDefinitions>
@@ -20,4 +20,36 @@
             </Grid.ColumnDefinitions>
         </Grid>
     </ItemsPanelTemplate>
+
+    <ItemsPanelTemplate x:Key="FollowPanelTemplate">
+        <WrapPanel />
+    </ItemsPanelTemplate>
+
+    <DataTemplate x:Key="FollowAccountTemplate">
+        <Border Margin="0 0 8 8"
+                Background="#4caf50"
+                BorderBrush="Green"
+                BorderThickness="1"
+                CornerRadius="2">
+            <DockPanel>
+                <TextBlock Foreground="#111"
+                           Padding="4 2"
+                           Text="{Binding}" />
+
+                <Button Width="Auto"
+                        Height="Auto"
+                        Margin="4"
+                        Background="#fff"
+                        BorderThickness="0"
+                        Padding="2">
+                    <Viewbox Width="16" Height="16">
+                        <Canvas Width="24" Height="24">
+                            <Path Data="M19,6.41L17.59,5L12,10.59L6.41,5L5,6.41L10.59,12L5,17.59L6.41,19L12,13.41L17.59,19L19,17.59L13.41,12L19,6.41Z" Fill="#f44336" />
+                        </Canvas>
+                    </Viewbox>
+                </Button>
+            </DockPanel>
+        </Border>
+    </DataTemplate>
+
 </ResourceDictionary>
