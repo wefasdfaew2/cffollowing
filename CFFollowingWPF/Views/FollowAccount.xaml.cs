@@ -1,4 +1,5 @@
-﻿using System;
+﻿using CFFollowingWPF.Bases;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -18,7 +19,7 @@ namespace CFFollowingWPF.Views
     /// <summary>
     /// Interaction logic for FollowAccount.xaml
     /// </summary>
-    public partial class FollowAccount : UserControl
+    public partial class FollowAccount : BaseUserControl
     {
         public FollowAccount()
         {
