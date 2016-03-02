@@ -9,6 +9,7 @@
     <SolidColorBrush x:Key="GreenColor">#4caf50</SolidColorBrush>
     <SolidColorBrush x:Key="BlueColor">#2196F3</SolidColorBrush>
     <SolidColorBrush x:Key="DeepPurpleColor">#673AB7</SolidColorBrush>
+    <SolidColorBrush x:Key="TealColor">#009688</SolidColorBrush>
 
     <!--  size  -->
     <system:Int32 x:Key="BaseFontSize">16</system:Int32>

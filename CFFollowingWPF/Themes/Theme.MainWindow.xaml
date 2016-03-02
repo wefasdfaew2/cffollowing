@@ -33,7 +33,8 @@
                 CornerRadius="2">
             <DockPanel>
                 <TextBlock Foreground="#111"
-                           Padding="4 2"
+                           Padding="4 0"
+                           VerticalAlignment="Center"
                            Text="{Binding}" />
 
                 <Button Width="Auto"

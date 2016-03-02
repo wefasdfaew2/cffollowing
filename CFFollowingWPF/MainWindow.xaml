@@ -9,7 +9,8 @@
         Background="{DynamicResource MaterialDesignPaper}"
         FontFamily="pack://application:,,,/MaterialDesignThemes.Wpf;component/Resources/Roboto/#Roboto"
         TextElement.FontSize="16"
-        TextElement.Foreground="{DynamicResource MaterialDesignBody}">
+        TextElement.Foreground="{DynamicResource MaterialDesignBody}"
+        WindowState="Maximized">
 
     <Window.Resources>
         <ResourceDictionary>
@@ -22,10 +23,10 @@
     <Grid>
         <Grid.RowDefinitions>
             <!--  account  -->
-            <RowDefinition Height="6*" />
+            <RowDefinition Height="Auto" />
 
             <!--  results  -->
-            <RowDefinition Height="4*" />
+            <RowDefinition Height="*" />
 
             <!--  status bar  -->
             <RowDefinition Height="Auto" />
@@ -47,27 +48,146 @@
                 </ItemsControl>
 
                 <!--  button add bet account  -->
-                <Button Grid.Row="1" HorizontalAlignment="Left">
-                    <StackPanel Orientation="Horizontal">
-                        <Viewbox Width="24" Height="24">
-                            <Canvas Width="24" Height="24">
-                                <Path Data="M19,13H13V19H11V13H5V11H11V5H13V11H19V13Z" Fill="#fff" />
-                            </Canvas>
-                        </Viewbox>
-                        <TextBlock Style="{StaticResource TextButtonIconStyle}" Text="ADD BET ACCOUNT" />
+                <DockPanel Grid.Row="1"
+                           Margin="0 8 0 0"
+                           LastChildFill="False">
+                    <Button HorizontalAlignment="Left"
+                            Background="{StaticResource LightBlueColor}"
+                            Padding="4 0">
+                        <StackPanel Orientation="Horizontal">
+                            <Viewbox Width="24" Height="24">
+                                <Canvas Width="24" Height="24">
+                                    <Path Data="M19,13H13V19H11V13H5V11H11V5H13V11H19V13Z" Fill="#fff" />
+                                </Canvas>
+                            </Viewbox>
+                            <TextBlock Style="{StaticResource TextButtonIconStyle}" Text="ADD BET ACCT" />
+                        </StackPanel>
+                    </Button>
+                    <StackPanel VerticalAlignment="Center" Orientation="Horizontal">
+                        <TextBlock VerticalAlignment="Center"
+                                   Padding="8 0"
+                                   Text="Total" />
+                        <TextBox MinWidth="120" BorderThickness="1" />
+                        <TextBox MinWidth="100"
+                                 Margin="8 0"
+                                 BorderThickness="1" />
+                        <TextBox MinWidth="60" BorderThickness="1" />
                     </StackPanel>
-                </Button>
+
+                    <StackPanel HorizontalAlignment="Right"
+                                DockPanel.Dock="Right"
+                                Orientation="Horizontal">
+                        <Button Content="START" />
+                        <Button Margin="8 0 0 0" Content="PAUSE" />
+                    </StackPanel>
+
+                    <StackPanel HorizontalAlignment="Right"
+                                DockPanel.Dock="Right"
+                                Orientation="Horizontal">
+                        <Button Background="{StaticResource TealColor}" Padding="4 0">
+                            <Viewbox Width="24" Height="24">
+                                <Canvas Width="24" Height="24">
+                                    <Path Data="M17.65,6.35C16.2,4.9 14.21,4 12,4A8,8 0 0,0 4,12A8,8 0 0,0 12,20C15.73,20 18.84,17.45 19.73,14H17.65C16.83,16.33 14.61,18 12,18A6,6 0 0,1 6,12A6,6 0 0,1 12,6C13.66,6 15.14,6.69 16.22,7.78L13,11H20V4L17.65,6.35Z" Fill="#fff" />
+                                </Canvas>
+                            </Viewbox>
+                        </Button>
+                        <Button Margin="8 0"
+                                Background="{StaticResource TealColor}"
+                                Content="SAVE" />
+                        <Button Background="{StaticResource TealColor}" Content="LOGIN" />
+                        <Button Margin="8 0"
+                                Background="{StaticResource TealColor}"
+                                Padding="4 0">
+                            <Viewbox Width="24" Height="24">
+                                <Canvas Width="24" Height="24">
+                                    <Path Data="M12,20L15.46,14H15.45C15.79,13.4 16,12.73 16,12C16,10.8 15.46,9.73 14.62,9H19.41C19.79,9.93 20,10.94 20,12A8,8 0 0,1 12,20M4,12C4,10.54 4.39,9.18 5.07,8L8.54,14H8.55C9.24,15.19 10.5,16 12,16C12.45,16 12.88,15.91 13.29,15.77L10.89,19.91C7,19.37 4,16.04 4,12M15,12A3,3 0 0,1 12,15A3,3 0 0,1 9,12A3,3 0 0,1 12,9A3,3 0 0,1 15,12M12,4C14.96,4 17.54,5.61 18.92,8H12C10.06,8 8.45,9.38 8.08,11.21L5.7,7.08C7.16,5.21 9.44,4 12,4M12,2A10,10 0 0,0 2,12A10,10 0 0,0 12,22A10,10 0 0,0 22,12A10,10 0 0,0 12,2Z" Fill="#fff" />
+                                </Canvas>
+                            </Viewbox>
+                        </Button>
+                    </StackPanel>
+                </DockPanel>
             </Grid>
         </Border>
 
         <!--  list  -->
-        <Border Grid.Row="1" Background="Indigo" />
+        <Border Grid.Row="1" Padding="8 0 8 8">
+            <Grid>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="7*" />
+                    <ColumnDefinition Width="3*" />
+                </Grid.ColumnDefinitions>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition />
+                </Grid.RowDefinitions>
+
+                <TextBlock Text="Bet success: 1" />
+
+                <TextBlock Grid.Column="1"
+                           Padding="8 0 0 0"
+                           Text="Message" />
+                <DataGrid Grid.Row="1" Background="#eee">
+                    <DataGrid.Columns>
+                        <DataGridTextColumn Header="Key" />
+                        <DataGridTextColumn Header="Acct" />
+                        <DataGridTextColumn Header="Arena" />
+                        <DataGridTextColumn Header="Match" />
+                        <DataGridTextColumn Header="Odds" />
+                        <DataGridTextColumn Header="Choose" />
+                        <DataGridTextColumn Header="Stake" />
+                        <DataGridTextColumn Header="FL Choose" />
+                        <DataGridTextColumn Header="FL Stake" />
+                        <DataGridTextColumn Header="FL Odd" />
+                        <DataGridTextColumn Header="FL Status" />
+                    </DataGrid.Columns>
+                </DataGrid>
+                <ListBox Grid.Row="1"
+                         Grid.Column="1"
+                         Margin="8 0 0 0"
+                         ScrollViewer.VerticalScrollBarVisibility="Auto">
+                    <ListBoxItem Content="lorem ipsum dolor sit amet" />
+                    <ListBoxItem Content="lorem ipsum dolor sit amet" />
+                    <ListBoxItem Content="lorem ipsum dolor sit amet" />
+                    <ListBoxItem Content="lorem ipsum dolor sit amet" />
+                    <ListBoxItem Content="lorem ipsum dolor sit amet" />
+                    <ListBoxItem Content="lorem ipsum dolor sit amet" />
+                    <ListBoxItem Content="lorem ipsum dolor sit amet" />
+                    <ListBoxItem Content="lorem ipsum dolor sit amet" />
+                    <ListBoxItem Content="lorem ipsum dolor sit amet" />
+                    <ListBoxItem Content="lorem ipsum dolor sit amet" />
+                    <ListBoxItem Content="lorem ipsum dolor sit amet" />
+                </ListBox>
+            </Grid>
+        </Border>
         <!--  endregion  -->
 
         <!--  region status bar  -->
         <StatusBar Grid.Row="2"
                    MinHeight="32"
-                   Background="{StaticResource DarkColor}" />
+                   HorizontalContentAlignment="Stretch"
+                   Background="{StaticResource DarkColor}">
+            <StatusBar.ItemsPanel>
+                <ItemsPanelTemplate>
+                    <DockPanel HorizontalAlignment="Stretch" />
+                </ItemsPanelTemplate>
+            </StatusBar.ItemsPanel>
+
+            <StatusBarItem HorizontalAlignment="Right">
+                <StackPanel Margin="8 4" Orientation="Horizontal">
+                    <TextBlock VerticalAlignment="Center"
+                               Foreground="#fff"
+                               Padding="8 0"
+                               Text="Processing" />
+                    <ProgressBar Width="24"
+                                 Height="24"
+                                 Foreground="#fff"
+                                 IsIndeterminate="True"
+                                 Style="{StaticResource MaterialDesignCircularProgressBar}" />
+                </StackPanel>
+            </StatusBarItem>
+
+
+        </StatusBar>
         <!--  endregion  -->
     </Grid>
 </Window>

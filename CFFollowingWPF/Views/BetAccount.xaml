@@ -6,7 +6,7 @@
                       xmlns:material="clr-namespace:MaterialDesignThemes.Wpf;assembly=MaterialDesignThemes.Wpf"
                       xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
                       xmlns:system="clr-namespace:System;assembly=mscorlib"
-                      TextBlock.FontSize="16"
+                      TextBlock.FontSize="14"
                       d:DesignWidth="500"
                       mc:Ignorable="d">
 
@@ -44,7 +44,7 @@
             <TextBlock Background="{StaticResource LightBlueColor}"
                        FontWeight="Medium"
                        Foreground="#fff"
-                       Padding="8"
+                       Padding="8 6"
                        Text="BET ACCOUNT" />
 
             <Button Grid.RowSpan="2"
@@ -63,9 +63,9 @@
             </Button>
 
             <!--  content  -->
-            <StackPanel Grid.Row="1" Margin="8 8 8 0">
+            <StackPanel Grid.Row="1" Margin="8 0 8 0">
                 <!--  acc  -->
-                <Grid>
+                <Grid Margin="0 4 0 0">
                     <Grid.ColumnDefinitions>
                         <ColumnDefinition Width="*" />
                         <ColumnDefinition Width="*" />
@@ -74,17 +74,17 @@
                     </Grid.ColumnDefinitions>
 
                     <StackPanel Grid.Column="0" Margin="0 0 4 0">
-                        <TextBlock Text="User name" />
+                        <TextBlock FontSize="14" Text="User name" />
                         <TextBox />
                     </StackPanel>
 
                     <StackPanel Grid.Column="1" Margin="4 0">
-                        <TextBlock Text="Password" />
+                        <TextBlock FontSize="14" Text="Password" />
                         <TextBox />
                     </StackPanel>
 
                     <StackPanel Grid.Column="2" Margin="4 0 0 0">
-                        <TextBlock Text="IP" />
+                        <TextBlock FontSize="14" Text="IP" />
                         <TextBox />
                     </StackPanel>
                 </Grid>
@@ -118,7 +118,7 @@
                 <!--  credit  -->
                 <Border BorderBrush="{StaticResource RedColor}"
                         BorderThickness="2"
-                        Padding="8">
+                        Padding="8 4">
                     <TextBlock>
                         <Run Text="Credit:" />
                         <Run Foreground="{StaticResource RedColor}" Text="Given" />
@@ -136,10 +136,24 @@
                             <RowDefinition Height="*" />
                         </Grid.RowDefinitions>
 
-                        <TextBlock FontSize="16"
+                        <!--<TextBlock
                                    FontWeight="Medium"
                                    Padding="8"
-                                   Text="Follow Accounts" />
+                                   Text="Follow Accounts" />-->
+                        <Button Height="Auto"
+                                HorizontalAlignment="Left"
+                                Background="{StaticResource GreenColor}"
+                                Padding="4">
+                            <StackPanel Orientation="Horizontal">
+                                <Viewbox Width="24" Height="24">
+                                    <Canvas Width="24" Height="24">
+                                        <Path Data="M19,13H13V19H11V13H5V11H11V5H13V11H19V13Z" Fill="#fff" />
+                                    </Canvas>
+                                </Viewbox>
+                                <TextBlock Style="{StaticResource TextButtonIconStyle}" Text="ACCOUNT FOLLOW" />
+                            </StackPanel>
+                        </Button>
+
                         <CheckBox Margin="8 0"
                                   HorizontalAlignment="Right"
                                   VerticalAlignment="Center"
@@ -166,7 +180,7 @@
 
             <!--  footer  -->
             <DockPanel Grid.Row="2" Margin="8">
-                <Button HorizontalAlignment="Left"
+                <!--<Button HorizontalAlignment="Left"
                         Background="{StaticResource GreenColor}"
                         DockPanel.Dock="Left">
                     <StackPanel Orientation="Horizontal">
@@ -177,7 +191,7 @@
                         </Viewbox>
                         <TextBlock Style="{StaticResource TextButtonIconStyle}" Text="FOLLOW" />
                     </StackPanel>
-                </Button>
+                </Button>-->
                 <StackPanel HorizontalAlignment="Right" Orientation="Horizontal">
                     <Button Content="BET" />
                     <Button Margin="8 0" Content="TRANS" />
